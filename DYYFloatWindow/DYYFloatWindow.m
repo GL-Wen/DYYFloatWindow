@@ -170,7 +170,7 @@
 //改变位置
 - (void)locationChange:(UIPanGestureRecognizer*)p
 {
-    CGPoint panPoint = [p locationInView:[[UIApplication sharedApplication] keyWindow]];
+    CGPoint panPoint = [p locationInView:[UIApplication sharedApplication].delegate.window];
     if(p.state == UIGestureRecognizerStateBegan)
     {
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(changeStatus) object:nil];
